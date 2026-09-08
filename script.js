@@ -189,27 +189,41 @@ function showResult() {
         `${score}%`;
 
 
-    let message;
+   let message;
+let level;
+let tip;
 
+if (score >= 80) {
 
-    if (score >= 80) {
+    level = "🌿 Eco Champion";
+    message = "Excellent! Your everyday choices show strong environmental awareness.";
+    tip = "Keep it up! Encourage others around you to make sustainable choices too.";
 
-        message =
-            "🌿 Excellent! Your everyday choices show strong environmental awareness.";
+} else if (score >= 60) {
 
-    } else if (score >= 60) {
+    level = "🌱 Green Starter";
+    message = "Good job! You already have several sustainable habits.";
+    tip = "Try reducing single-use plastic and saving a little more electricity.";
 
-        message =
-            "🌱 Good job! A few small changes could make your habits even more sustainable.";
+} else if (score >= 40) {
 
-    } else {
+    level = "🌍 Eco Explorer";
+    message = "You're on your way! There are several easy habits you can improve.";
+    tip = "Start with one simple change, such as carrying a reusable water bottle.";
 
-        message =
-            "💚 There's room to improve! Start with one small sustainable change at a time.";
-    }
+} else {
 
+    level = "💚 Change Maker in Progress";
+    message = "Every journey starts with one small step.";
+    tip = "Try focusing on saving water, reducing waste, and switching off unused appliances.";
 
-    document.getElementById("result-message").textContent = message;
+}
+
+document.getElementById("result-message").textContent = message;
+
+document.getElementById("result-level").textContent = level;
+
+document.getElementById("eco-tip").textContent = "💡 Your next step: " + tip;
 }
 
 
