@@ -3,39 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>EcoWise | Sustainable Living</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <h1>🌱 EcoWise</h1>
+    <header>
+        <div class="logo">🌱 EcoWise</div>
 
-    <h2>Rethinking sustainability through technology.</h2>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#impact">Impact</a>
+        </nav>
+    </header>
 
-    <p>
-        Discover how your everyday choices can influence the environment
-        and explore smarter ways to live sustainably.
-    </p>
+    <section class="hero" id="home">
 
-    <button>Explore Your Eco Score</button>
+        <h1>EcoWise 🌍</h1>
 
-    <hr>
+        <h2>Rethinking sustainability through technology.</h2>
 
-    <h2>Why EcoWise?</h2>
+        <p>
+            Discover how everyday choices shape our environment.
+            EcoWise turns simple habits into meaningful environmental
+            insights and practical steps towards a more sustainable future.
+        </p>
 
-    <p>
-        EcoWise transforms everyday habits into meaningful environmental
-        insights, helping users make more informed and sustainable choices.
-    </p>
+        <button onclick="document.getElementById('impact').scrollIntoView({behavior:'smooth'})">
+            Explore Your Impact →
+        </button>
 
-    <h3>🌍 Make an Impact</h3>
-    <p>Small decisions can contribute to a healthier planet.</p>
+    </section>
 
-    <h3>📊 Understand Your Choices</h3>
-    <p>Explore how different habits influence your environmental impact.</p>
+    <section class="section" id="about">
 
-    <h3>💡 Discover Better Choices</h3>
-    <p>Get practical ideas for building more sustainable habits.</p>
+        <h2>Why EcoWise?</h2>
+
+        <p>
+            Sustainability begins with awareness. EcoWise combines
+            technology, mathematics and environmental science to help
+            users understand the impact of their everyday decisions.
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>🌍 Make an Impact</h3>
+                <p>
+                    Understand how small everyday decisions can contribute
+                    to a healthier planet.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>📊 Measure Your Choices</h3>
+                <p>
+                    Use data-driven scoring to understand your environmental
+                    habits.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>💡 Choose Better</h3>
+                <p>
+                    Discover simple and practical ways to make more
+                    sustainable choices.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="section" id="impact">
+
+        <h2>🌱 Ready to discover your Eco Score?</h2>
+
+        <p>
+            Your choices matter. Let's find out how sustainable your
+            everyday habits are.
+        </p>
+
+        <br>
+
+        <button onclick="startEcoCheck()">
+            Start Eco Check
+        </button>
+
+        <div id="result"></div>
+
+    </section>
+
+    <footer>
+        <p>🌱 EcoWise — Technology for a more sustainable tomorrow.</p>
+    </footer>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
