@@ -108,6 +108,9 @@ function startEcoCheck() {
 function showQuestion() {
 
     const question = questions[currentQuestion];
+    
+    document.getElementById("progress").textContent =
+    `Question ${currentQuestion + 1} of ${questions.length}`;
 
     document.getElementById("question").textContent =
         `${currentQuestion + 1}. ${question.question}`;
