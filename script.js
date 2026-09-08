@@ -69,7 +69,7 @@ const questions = [
 let currentQuestion = 0;
 let totalScore = 0;
 let selectedAnswer = null;
-
+let userAnswers = [];
 
 function startEcoCheck() {
 
@@ -152,6 +152,7 @@ function nextQuestion() {
         return;
     }
 
+    userAnswers[currentQuestion] = selectedAnswer;
 
     totalScore +=
         questions[currentQuestion].options[selectedAnswer].points;
@@ -222,12 +223,139 @@ if (score >= 80) {
 document.getElementById("result-message").textContent = message;
 
 document.getElementById("result-level").textContent = level;
-
+    
 document.getElementById("eco-tip").textContent = "💡 Your next step: " + tip;
 }
-
+updateEcoImpact();
+updateDashboard();
+updateActions();
+updateBadge(score);
 
 function restartQuiz() {
 
     startEcoCheck();
+}
+// ECO IMPACT
+
+function updateEcoImpact() {
+
+    document.getElementById("trees-count").textContent = totalScore;
+    document.getElementById("water-count").textContent = Math.round(totalScore * 1.5);
+    document.getElementById("plastic-count").textContent = Math.round(totalScore * 1.2);
+
+}
+
+
+// PERSONAL DASHBOARD
+
+function updateDashboard() {
+
+    const scores = questions.map((question, index) => {
+
+        const answer = userAnswers[index];
+
+        if (answer === undefined) {
+            return 0;
+        }
+
+        return (question.options[answer].points / 2) * 100;
+
+    });
+
+
+    document.getElementById("transport-score").textContent =
+        `${scores[0]}%`;
+
+    document.getElementById("transport-fill").style.width =
+        `${scores[0]}%`;
+
+
+    document.getElementById("water-score").textContent =
+        `${scores[3]}%`;
+
+    document.getElementById("water-fill").style.width =
+        `${scores[3]}%`;
+
+
+    document.getElementById("waste-score").textContent =
+        `${Math.round((scores[4] + scores[2]) / 2)}%`;
+
+    document.getElementById("waste-fill").style.width =
+        `${Math.round((scores[4] + scores[2]) / 2)}%`;
+
+
+    document.getElementById("food-score").textContent =
+        `${scores[5]}%`;
+
+    document.getElementById("food-fill").style.width =
+        `${scores[5]}%`;
+
+}
+
+
+// PERSONAL ACTIONS
+
+function updateActions() {
+
+    const actions = [
+        "🚲 Try walking, cycling, or using public transport for short journeys.",
+        "💧 Turn off taps when water is not needed.",
+        "♻️ Separate recyclable and non-recyclable waste.",
+        "🍽️ Take only as much food as you can finish.",
+        "🛍️ Carry reusable bags, bottles, or containers."
+    ];
+
+
+    const actionList = document.getElementById("action-list");
+
+    actionList.innerHTML = "";
+
+
+    actions.slice(0, 3).forEach(action => {
+
+        const card = document.createElement("div");
+
+        card.className = "action-card";
+
+        card.textContent = action;
+
+        actionList.appendChild(card);
+
+    });
+
+}
+
+
+// ECO BADGE
+
+function updateBadge(score) {
+
+    const badge = document.getElementById("eco-badge");
+
+    if (score >= 80) {
+
+        badge.innerHTML = `
+            <div class="badge-icon">🏆</div>
+            <h3>Eco Champion</h3>
+            <p>Outstanding sustainable choices!</p>
+        `;
+
+    } else if (score >= 60) {
+
+        badge.innerHTML = `
+            <div class="badge-icon">🌿</div>
+            <h3>Green Starter</h3>
+            <p>You're building strong eco-friendly habits!</p>
+        `;
+
+    } else {
+
+        badge.innerHTML = `
+            <div class="badge-icon">🌱</div>
+            <h3>Eco Explorer</h3>
+            <p>Keep learning and growing your sustainable habits!</p>
+        `;
+
+    }
+
 }
