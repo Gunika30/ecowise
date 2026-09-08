@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,6 +22,9 @@
         </nav>
     </header>
 
+
+    <!-- HERO SECTION -->
+
     <section class="hero" id="home">
 
         <h1>EcoWise 🌍</h1>
@@ -29,15 +33,19 @@
 
         <p>
             Discover how everyday choices shape our environment.
-            EcoWise turns simple habits into meaningful environmental
-            insights and practical steps towards a more sustainable future.
+            EcoWise transforms simple habits into meaningful
+            environmental insights and practical steps towards a
+            more sustainable future.
         </p>
 
-        <button onclick="document.getElementById('impact').scrollIntoView({behavior:'smooth'})">
-            Explore Your Impact →
+        <button onclick="startEcoCheck()">
+            Start Your Eco Check →
         </button>
 
     </section>
+
+
+    <!-- ABOUT SECTION -->
 
     <section class="section" id="about">
 
@@ -54,7 +62,7 @@
             <div class="card">
                 <h3>🌍 Make an Impact</h3>
                 <p>
-                    Understand how small everyday decisions can contribute
+                    Understand how everyday decisions can contribute
                     to a healthier planet.
                 </p>
             </div>
@@ -62,16 +70,16 @@
             <div class="card">
                 <h3>📊 Measure Your Choices</h3>
                 <p>
-                    Use data-driven scoring to understand your environmental
-                    habits.
+                    Use a simple data-based scoring system to explore
+                    your environmental habits.
                 </p>
             </div>
 
             <div class="card">
                 <h3>💡 Choose Better</h3>
                 <p>
-                    Discover simple and practical ways to make more
-                    sustainable choices.
+                    Discover practical ways to build more sustainable
+                    everyday habits.
                 </p>
             </div>
 
@@ -79,30 +87,64 @@
 
     </section>
 
-    <section class="section" id="impact">
 
-        <h2>🌱 Ready to discover your Eco Score?</h2>
+    <!-- ECO CHECK SECTION -->
 
-        <p>
-            Your choices matter. Let's find out how sustainable your
-            everyday habits are.
+    <section class="section eco-check" id="impact">
+
+        <h2>🌱 Discover Your Eco Score</h2>
+
+        <p class="subtitle">
+            Answer a few questions about your everyday habits.
         </p>
 
-        <br>
+        <div id="question-container">
 
-        <button onclick="startEcoCheck()">
-            Start Eco Check
-        </button>
+            <h3 id="question"></h3>
 
-        <div id="result"></div>
+            <div id="options"></div>
+
+            <button id="next-btn" onclick="nextQuestion()">
+                Next →
+            </button>
+
+        </div>
+
+
+        <!-- RESULT -->
+
+        <div id="result" style="display: none;">
+
+            <h2>Your Eco Score</h2>
+
+            <div class="score-number" id="score-number"></div>
+
+            <div class="score-bar">
+                <div class="score-fill" id="score-fill"></div>
+            </div>
+
+            <p id="result-message"></p>
+
+            <button onclick="restartQuiz()">
+                Take the Eco Check Again
+            </button>
+
+        </div>
 
     </section>
 
+
     <footer>
-        <p>🌱 EcoWise — Technology for a more sustainable tomorrow.</p>
+
+        <p>
+            🌱 EcoWise — Technology for a more sustainable tomorrow.
+        </p>
+
     </footer>
+
 
     <script src="script.js"></script>
 
 </body>
+
 </html>
