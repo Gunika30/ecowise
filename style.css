@@ -352,3 +352,14 @@ footer {
         font-size: 16px;
     }
 }
+#progress {
+    display: inline-block;
+    margin-bottom: 18px;
+    padding: 7px 16px;
+    border-radius: 20px;
+    background: #e5f1e7;
+    color: #234d35;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+}
