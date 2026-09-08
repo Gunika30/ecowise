@@ -56,13 +56,29 @@ const questions = [
         ]
     },
     {
-        question: "🌳 How often do you take part in environmentally friendly activities?",
-        options: [
-            { text: "Frequently", points: 2 },
-            { text: "Sometimes", points: 1 },
-            { text: "Rarely", points: 0 }
-        ]
-    }
+    question: "🌳 How often do you take part in environmentally friendly activities?",
+    options: [
+        { text: "Frequently", points: 2 },
+        { text: "Sometimes", points: 1 },
+        { text: "Rarely", points: 0 }
+    ]
+},
+{
+    question: "🔌 How often do you unplug chargers and devices when they are not being used?",
+    options: [
+        { text: "Usually", points: 2 },
+        { text: "Sometimes", points: 1 },
+        { text: "Rarely", points: 0 }
+    ]
+},
+{
+    question: "👕 What do you usually do with clothes you no longer use?",
+    options: [
+        { text: "Donate / Reuse them", points: 2 },
+        { text: "Keep them unused", points: 1 },
+        { text: "Throw them away", points: 0 }
+    ]
+}
 ];
 
 
