@@ -240,12 +240,12 @@ document.getElementById("result-message").textContent = message;
 
 document.getElementById("result-level").textContent = level;
     
-document.getElementById("eco-tip").textContent = "💡 Your next step: " + tip;
-}
+ document.getElementById("eco-tip").textContent = "💡 Your next step: " + tip;
 updateEcoImpact();
 updateDashboard();
 updateActions();
 updateBadge(score);
+}
 
 function restartQuiz() {
 
