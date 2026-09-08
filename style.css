@@ -435,3 +435,304 @@ footer {
     color: #52645a;
     margin-top: 5px;
 }
+/* =================================
+   ECOWISE FEATURE SECTIONS
+================================= */
+
+
+/* ECO IMPACT */
+
+.impact-counter {
+    background: #edf5ef;
+}
+
+.impact-cards {
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.impact-card {
+    width: 230px;
+    padding: 28px 20px;
+    background: white;
+    border-radius: 24px;
+    border: 1px solid #dce8de;
+    box-shadow: 0 10px 30px rgba(30, 50, 38, 0.08);
+    transition: 0.25s ease;
+}
+
+.impact-card:hover {
+    transform: translateY(-7px);
+}
+
+.impact-card span {
+    display: block;
+    font-size: 35px;
+    margin-bottom: 8px;
+}
+
+.impact-card strong {
+    display: block;
+    font-size: 34px;
+    color: #234d35;
+}
+
+.impact-card p {
+    color: #52645a;
+    margin-top: 5px;
+}
+
+
+/* DASHBOARD */
+
+.dashboard-section {
+    background: white;
+}
+
+.dashboard-card {
+    max-width: 720px;
+    margin: 40px auto 0;
+    padding: 35px;
+    background: #f3f8f4;
+    border-radius: 28px;
+    border: 1px solid #dce8de;
+}
+
+.category {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.category:last-child {
+    margin-bottom: 0;
+}
+
+.category > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.category span {
+    font-weight: bold;
+    color: #234d35;
+}
+
+.category-bar {
+    height: 12px;
+    background: #dce6de;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.category-bar div {
+    width: 0;
+    height: 100%;
+    background: #234d35;
+    border-radius: 20px;
+    transition: width 1s ease;
+}
+
+
+/* ACTIONS */
+
+.action-section {
+    background: #edf5ef;
+}
+
+.action-list {
+    max-width: 720px;
+    margin: 40px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.action-card {
+    padding: 20px 24px;
+    background: white;
+    border-radius: 18px;
+    border: 1px solid #dce8de;
+    text-align: left;
+    font-size: 17px;
+    box-shadow: 0 7px 20px rgba(30, 50, 38, 0.06);
+    transition: 0.2s ease;
+}
+
+.action-card:hover {
+    transform: translateX(5px);
+}
+
+
+/* ECO BADGE */
+
+.badge-section {
+    background: white;
+}
+
+.eco-badge {
+    max-width: 400px;
+    margin: 40px auto 0;
+    padding: 35px;
+    border-radius: 28px;
+    background: #f3f8f4;
+    border: 2px solid #dce8de;
+    box-shadow: 0 12px 35px rgba(30, 50, 38, 0.08);
+}
+
+.badge-icon {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.eco-badge h3 {
+    font-size: 25px;
+    color: #234d35;
+    margin-bottom: 8px;
+}
+
+.eco-badge p {
+    color: #52645a;
+}
+
+
+/* KNOWLEDGE GAME */
+
+.knowledge-section {
+    background: #edf5ef;
+}
+
+.knowledge-card {
+    max-width: 720px;
+    margin: 40px auto 0;
+    padding: 40px;
+    background: white;
+    border-radius: 28px;
+    border: 1px solid #dce8de;
+    box-shadow: 0 15px 40px rgba(30, 50, 38, 0.1);
+}
+
+#knowledge-question {
+    font-size: 23px;
+    margin-bottom: 25px;
+}
+
+#knowledge-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.knowledge-option {
+    width: 100%;
+    background: white;
+    color: #1d3025;
+    border: 2px solid #dce6de;
+    border-radius: 16px;
+    text-align: left;
+    transition: 0.2s ease;
+}
+
+.knowledge-option:hover {
+    background: #e5f1e7;
+    border-color: #234d35;
+    color: #1d3025;
+    box-shadow: none;
+}
+
+#knowledge-next {
+    margin-top: 22px;
+}
+
+#knowledge-result {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #234d35;
+}
+
+
+/* WHY IT MATTERS */
+
+.why-section {
+    background: white;
+}
+
+.why-cards {
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.why-card {
+    width: 280px;
+    padding: 30px;
+    border-radius: 24px;
+    background: #f3f8f4;
+    border: 1px solid #dce8de;
+    transition: 0.25s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 30px rgba(30, 50, 38, 0.08);
+}
+
+.why-card span {
+    display: block;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.why-card h3 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.why-card p {
+    color: #52645a;
+}
+
+.source-note {
+    margin-top: 35px;
+    font-size: 14px;
+    color: #718078;
+}
+
+
+/* MOBILE FEATURE SECTIONS */
+
+@media (max-width: 600px) {
+
+    .impact-card {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .dashboard-card,
+    .knowledge-card {
+        padding: 25px 20px;
+    }
+
+    .formula-card {
+        padding: 28px 20px;
+    }
+
+    .formula {
+        font-size: 20px;
+    }
+
+    .formula-details div {
+        width: 100%;
+    }
+
+    .why-card {
+        width: 100%;
+        max-width: 320px;
+    }
+}
