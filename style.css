@@ -363,3 +363,75 @@ footer {
     font-weight: bold;
     letter-spacing: 0.3px;
 }
+/* RESULT LEVEL + ECO TIP */
+
+#result-level {
+    display: inline-block;
+    margin: 8px 0 15px;
+    padding: 9px 18px;
+    border-radius: 25px;
+    background: #e5f1e7;
+    color: #234d35;
+    font-size: 18px;
+}
+
+#eco-tip {
+    margin: 15px auto 25px;
+    padding: 16px 20px;
+    max-width: 520px;
+    border-radius: 16px;
+    background: #f4f8f3;
+    color: #405348;
+    font-size: 16px;
+    border: 1px solid #dce8de;
+}
+
+
+/* SCIENCE SECTION */
+
+.science-section {
+    background: white;
+}
+
+.formula-card {
+    max-width: 800px;
+    margin: 40px auto 0;
+    padding: 40px;
+    border-radius: 28px;
+    background: #f3f8f4;
+    border: 1px solid #dce8de;
+    box-shadow: 0 12px 35px rgba(30, 50, 38, 0.08);
+}
+
+.formula {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.formula span {
+    color: #234d35;
+}
+
+.formula-details {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.formula-details div {
+    min-width: 190px;
+    padding: 20px;
+    border-radius: 18px;
+    background: white;
+}
+
+.formula-details strong {
+    font-size: 20px;
+}
+
+.formula-details p {
+    color: #52645a;
+    margin-top: 5px;
+}
