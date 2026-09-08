@@ -92,6 +92,7 @@ function startEcoCheck() {
     currentQuestion = 0;
     totalScore = 0;
     selectedAnswer = null;
+    userAnswers = [];
 
     document.getElementById("result").style.display = "none";
     document.getElementById("question-container").style.display = "block";
