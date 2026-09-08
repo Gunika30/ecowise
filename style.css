@@ -736,3 +736,9 @@ footer {
         max-width: 320px;
     }
 }
+.creator {
+    margin-top: 8px;
+    font-size: 14px;
+    opacity: 0.75;
+    letter-spacing: 0.4px;
+}
