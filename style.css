@@ -745,3 +745,6 @@ footer {
     opacity: 0.75;
     letter-spacing: 0.4px;
 }
+.formula-details strong {
+    color: #173d2b !important;
+}
