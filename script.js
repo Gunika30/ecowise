@@ -56,8 +56,14 @@ function startEcoCheck() {
     }
 
     document.getElementById("result").innerHTML = `
-        <h2>Your Eco Score: ${score}/100 🌍</h2>
-        <p>${message}</p>
-        <p>Small choices can create meaningful change.</p>
-    `;
+    <h2>Your Eco Score: ${score}/100 🌍</h2>
+
+    <div class="score-bar">
+        <div class="score-fill" style="width: ${score}%"></div>
+    </div>
+
+    <p>${message}</p>
+
+    <p>Small choices can create meaningful change.</p>
+`;
 }
