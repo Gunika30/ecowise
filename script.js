@@ -95,6 +95,9 @@ function showQuestion() {
     document.getElementById("question").textContent =
         `${currentQuestion + 1}. ${question.question}`;
 
+    document.getElementById("progress").textContent =
+    `Question ${currentQuestion + 1} of ${questions.length}`;
+
     const optionsContainer = document.getElementById("options");
 
     optionsContainer.innerHTML = "";
