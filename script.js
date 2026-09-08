@@ -235,6 +235,107 @@ function restartQuiz() {
 
     startEcoCheck();
 }
+// ECO KNOWLEDGE CHALLENGE
+
+const knowledgeQuestions = [
+    {
+        question: "🌱 Which option is generally the most sustainable for a short journey?",
+        options: ["🚗 Car", "🚲 Bicycle", "✈️ Airplane"],
+        answer: 1
+    },
+    {
+        question: "♻️ Which action helps reduce waste?",
+        options: ["Use disposable items", "Reuse products", "Throw everything away"],
+        answer: 1
+    },
+    {
+        question: "💧 Which habit helps conserve water?",
+        options: ["Leave taps running", "Fix leaks and turn taps off", "Use more water than needed"],
+        answer: 1
+    }
+];
+
+let knowledgeQuestion = 0;
+let knowledgeScore = 0;
+
+
+function startKnowledgeChallenge() {
+
+    knowledgeQuestion = 0;
+    knowledgeScore = 0;
+
+    document.getElementById("knowledge-result").textContent = "";
+
+    showKnowledgeQuestion();
+}
+
+
+function showKnowledgeQuestion() {
+
+    const question = knowledgeQuestions[knowledgeQuestion];
+
+    document.getElementById("knowledge-question").textContent =
+        `${knowledgeQuestion + 1}. ${question.question}`;
+
+    const container = document.getElementById("knowledge-options");
+
+    container.innerHTML = "";
+
+    question.options.forEach((option, index) => {
+
+        const button = document.createElement("button");
+
+        button.className = "knowledge-option";
+
+        button.textContent = option;
+
+        button.onclick = () => checkKnowledgeAnswer(index);
+
+        container.appendChild(button);
+    });
+
+    document.getElementById("knowledge-next").textContent =
+        "Choose an Answer";
+}
+
+
+function checkKnowledgeAnswer(selected) {
+
+    const question = knowledgeQuestions[knowledgeQuestion];
+
+    if (selected === question.answer) {
+        knowledgeScore++;
+    }
+
+    knowledgeQuestion++;
+
+    if (knowledgeQuestion < knowledgeQuestions.length) {
+
+        showKnowledgeQuestion();
+
+    } else {
+
+        document.getElementById("knowledge-question").textContent =
+            "🎉 Challenge Complete!";
+
+        document.getElementById("knowledge-options").innerHTML = "";
+
+        document.getElementById("knowledge-next").textContent =
+            "Play Again →";
+
+        document.getElementById("knowledge-result").textContent =
+            `You scored ${knowledgeScore}/${knowledgeQuestions.length} 🌱`;
+
+        document.getElementById("knowledge-next").onclick =
+            startKnowledgeChallenge;
+    }
+}
+
+
+function nextKnowledgeQuestion() {
+
+    startKnowledgeChallenge();
+}
 // ECO IMPACT
 
 function updateEcoImpact() {
